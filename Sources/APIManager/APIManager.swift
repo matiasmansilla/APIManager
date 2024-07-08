@@ -13,6 +13,8 @@ protocol APIManagerProtocol {
 
 public class APIManager: APIManagerProtocol {
     
+    public init() {}
+    
     // MARK: - Generic Execute function with Decodable Response
     public func execute<T>(_ endpoint: EndPointType, parameters: [String: Any]? = nil, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
         
